@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6em;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+header {
+    margin-top: 32px;
+    height: 120px;
+
+}
+
+header div {
+    width: 120px;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+
+    animation: fromTop .3s .4s backwards;
+}
+
+header div:hover {
+    transform: scale(1.1);
+   
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 32px;
+    margin-bottom: 44px;
+}
+
+section {
+    color: #fff;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section:nth-child(1){
+    animation: fromBottom .7s .6s backwards;
+}
+
+section:nth-child(2){
+    animation: fromBottom .7s .8s backwards;
+}
+
+section:nth-child(3){
+    animation: fromBottom .7s 1s backwards;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+section ul li {
+    transition: transform 0.3s;
+}
+
+section ul li:hover {
+    transform: scale(0.9);
+}
+
+.games_list img {
+    border-radius: 8px;
+    width: 90px;
+}
+
+.channel_list img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #443e54;
+}
+
+/* animation */
+
+
+@keyframes fromTop{
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
